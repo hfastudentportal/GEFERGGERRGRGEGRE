@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holy Family Academy 2026-2027</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 10px;
+      border-bottom: 2px solid #2c3e50;
+    }
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .dashboard {
+      display: none;
+    }
+    nav {
+      background: #2c3e50;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .history {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner Header -->
+  <header>
+    <img src="hfa-banner.png" alt="Holy Family Academy Banner">
+  </header>
+
+  <!-- Start Page -->
+  <div class="container" id="start">
+    <h1>Holy Family Academy 2026-2027</h1>
+    <p>Enter your name to continue:</p>
+    <input type="text" id="username" placeholder="Your Name">
+    <button onclick="enterDashboard()">Submit</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboard">
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#news">News</a>
+      <a href="#history">History</a>
+    </nav>
+
+    <!-- News Section -->
+    <section id="news">
+      <h2 id="welcome"></h2>
+      <h3>Welcome to the HFA Official NEWS</h3>
+      <p>Stay tuned for updates and announcements from Holy Family Academy.</p>
+    </section>
+
+    <!-- History Section -->
+    <section id="history">
+      <div class="history">
+        <h3>Holy Family History</h3>
+        <p><strong>HISTORY OF HOLY FAMILY ACADEMY</strong></p>
+        <p>Holy Family Academy, a school with high academic standards and providing good Christian education with strong community service orientation, has both the grade school and high school departments accredited by PAASCU...</p>
+        <p>Holy Family Academy was founded by Fr. Pablo Gamboa on August 20, 1906...</p>
+        <p>In 1910 the Augustinian Sisters took over the administration...</p>
+        <p>During the school year 1922-1923, two high school levels were opened...</p>
+        <p>With the establishment of other parishes in Angeles...</p>
+        <p>In 1961 Holy Family reopened the High School Department exclusively for girls...</p>
+        <p>In 1965, Sister Concepcion Pellosa, OSB, the first Filipino superior...</p>
+        <p>By mid 1980’s the campus had become very congested...</p>
+        <p>By 1992 the high school with its vast campus could already boast...</p>
+        <p>The needs for a bigger library and canteen prompted the school...</p>
+        <p>The anticipated 100th year of HFA foundation in 2006 was planned...</p>
+        <p>Holy Family Academy can look back at its past amidst its trials...</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function enterDashboard() {
+      const name = document.getElementById('username').value;
+      if (name.trim() !== "") {
+        document.getElementById('start').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        document.getElementById('welcome').innerText = "Hello " + name + "!";
+      } else {
+        alert("Please enter your name.");
+      }
+    }
+  </script>
+</body>
+</html>
